@@ -1,4 +1,4 @@
-
+// a
 const nombreCache = "apv-v1";
 const archivos = [
     "/",
@@ -19,7 +19,7 @@ self.addEventListener("install", e => {
                 console.log("Cacheando");
                 cache.addAll(archivos);
             })
-    )
+    ) 
 })
 
 // Activar el Service Worker
