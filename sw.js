@@ -3,6 +3,7 @@ const nombreCache = "apv-v1";
 const archivos = [
     "/",
     "/index.html",
+    "/error.html",
     "/css/bootstrap.css",
     "/css/styles.css",
     "/js/app.js",
@@ -38,5 +39,6 @@ self.addEventListener("fetch", e => {
             .then(respuestaCache => {
                 return respuestaCache;
             })
+            .catch(() => caches.match("/error.html"))
     )
 })
